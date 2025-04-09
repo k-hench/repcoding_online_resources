@@ -9,13 +9,7 @@ try_read_tsv <- \(file, ...) {
   tryCatch(
     {
       # case whithout errors
-      data <- read_tsv(file)
-      print(
-        glue(
-          "Lucky you!\nThis time it worked because we are living in\n{getwd()}"
-        )
-      )
-      data
+      read_tsv(file)
     },
     # case in which the data import creates an error
     error = function(e) {
